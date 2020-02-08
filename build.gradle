@@ -4,8 +4,8 @@ plugins {
     id 'maven-publish' // this allows ./gradlew publish or publishToMavenLocal
 }
 
-group 'wumo'
-version '2.0'
+group 'nagyga1'
+version '2.1-SNAPSHOT'
 
 javafx {
     modules = [ 'javafx.controls', 'javafx.base', 'javafx.swing' ]
