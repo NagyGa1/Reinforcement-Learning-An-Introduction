@@ -2,7 +2,6 @@
 
 package lab.mars.rl.algo.eligibility_trace.control
 
-import ch.qos.logback.classic.Level
 import javafx.application.Application
 import kotlinx.coroutines.runBlocking
 import lab.mars.rl.model.impl.func.LinearFunc
@@ -14,13 +13,13 @@ import lab.mars.rl.problem.MountainCar.CarState
 import lab.mars.rl.util.asyncs
 import lab.mars.rl.util.await
 import lab.mars.rl.util.format
-import lab.mars.rl.util.logLevel
 import lab.mars.rl.util.matrix.SparseMatrix
 import lab.mars.rl.util.range.rangeTo
 import lab.mars.rl.util.range.step
 import lab.mars.rl.util.tuples.tuple2
 import lab.mars.rl.util.ui.*
 import org.junit.Test
+import org.slf4j.event.Level
 import java.util.concurrent.CountDownLatch
 import kotlin.concurrent.thread
 
@@ -66,7 +65,7 @@ class `Test Optimal Sarsa λ` {
   
   @Test
   fun `Early performance on the Mountain Car`() {
-    logLevel(Level.ERROR)
+
     val prob = MountainCar.make()
     
     val episodes = 50
@@ -122,7 +121,6 @@ class `Test Optimal Sarsa λ` {
   
   @Test
   fun `Comparison`() {
-    logLevel(Level.ERROR)
     val prob = MountainCar.make()
     
     val episodes = 20

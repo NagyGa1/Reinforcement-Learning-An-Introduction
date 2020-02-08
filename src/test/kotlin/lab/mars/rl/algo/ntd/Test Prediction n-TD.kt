@@ -1,6 +1,5 @@
 package lab.mars.rl.algo.ntd
 
-import ch.qos.logback.classic.Level
 import javafx.application.Application
 import kotlinx.coroutines.runBlocking
 import lab.mars.rl.problem.Blackjack
@@ -41,8 +40,7 @@ class `Test Prediction n-TD` {
   
   @Test
   fun `RandomWalk RMS`() {
-    logLevel(Level.ERROR)
-    
+
     val (prob, π) = `19-state RandomWalk`.make()
     val realV = listOf(-20..20 step 2) { it / 20.0 }
     realV[0] = 0.0

@@ -2,7 +2,6 @@
 
 package lab.mars.rl.algo.func_approx.on_policy
 
-import ch.qos.logback.classic.Level
 import javafx.application.Application
 import kotlinx.coroutines.runBlocking
 import lab.mars.rl.model.impl.func.LinearFunc
@@ -14,7 +13,6 @@ import lab.mars.rl.problem.MountainCar.CarState
 import lab.mars.rl.util.asyncs
 import lab.mars.rl.util.await
 import lab.mars.rl.util.format
-import lab.mars.rl.util.logLevel
 import lab.mars.rl.util.range.rangeTo
 import lab.mars.rl.util.range.step
 import lab.mars.rl.util.tuples.tuple2
@@ -27,7 +25,6 @@ import org.junit.Test
 class `Test Optimal n-step semi-gradient Sarsa` {
   @Test
   fun `One-step vs multi-step performance`() {
-    logLevel(Level.ERROR)
     val prob = MountainCar.make()
     
     val numTilings = 8
@@ -79,7 +76,6 @@ class `Test Optimal n-step semi-gradient Sarsa` {
   
   @Test
   fun `Effect of the α and n on early performance`() {
-    logLevel(Level.ERROR)
     val prob = MountainCar.make()
     
     val numTilings = 8

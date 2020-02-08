@@ -1,6 +1,5 @@
 package lab.mars.rl.algo.eligibility_trace.prediction
 
-import ch.qos.logback.classic.Level
 import javafx.application.Application
 import kotlinx.coroutines.runBlocking
 import lab.mars.rl.model.impl.func.LinearFunc
@@ -20,8 +19,7 @@ import org.junit.Test
 class `Test Prediction True Online TDλ` {
   @Test
   fun `Performance`() {
-    logLevel(Level.ERROR)
-    
+
     val (prob, π) = `19-state RandomWalk`.make()
     val realV = listOf(-20..20 step 2) { it / 20.0 }
     realV[0] = 0.0

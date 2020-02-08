@@ -2,7 +2,6 @@
 
 package lab.mars.rl.algo.func_approx.prediction
 
-import ch.qos.logback.classic.Level
 import javafx.application.Application
 import kotlinx.coroutines.runBlocking
 import lab.mars.rl.algo.td.`Tabular TD(0)`
@@ -17,7 +16,6 @@ import lab.mars.rl.util.asyncs
 import lab.mars.rl.util.await
 import lab.mars.rl.util.collection.filter
 import lab.mars.rl.util.format
-import lab.mars.rl.util.logLevel
 import lab.mars.rl.util.tuples.tuple2
 import lab.mars.rl.util.ui.ChartApp
 import lab.mars.rl.util.ui.D2DChart
@@ -65,8 +63,7 @@ class `Tile Coding` {
   
   @Test
   fun `Tile Coding RMS`() {
-    logLevel(Level.ERROR)
-    
+
     val (prob, π) = `1000-state RandomWalk`.make()
     val V = prob.`Tabular TD(0)`(π = π, episodes = 100000, α = 0.1)
     
@@ -158,8 +155,7 @@ class `Tile Coding` {
   
   @Test
   fun `Sutton Tile Coding RMS`() {
-    logLevel(Level.ERROR)
-    
+
     val (prob, π) = `1000-state RandomWalk`.make()
     val V = prob.`Tabular TD(0)`(π = π, episodes = 100000, α = 0.1)
     

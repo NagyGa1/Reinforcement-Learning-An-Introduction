@@ -1,6 +1,5 @@
 package lab.mars.rl.algo.eligibility_trace.prediction
 
-import ch.qos.logback.classic.Level
 import javafx.application.Application
 import kotlinx.coroutines.runBlocking
 import lab.mars.rl.model.impl.func.LinearFunc
@@ -10,7 +9,6 @@ import lab.mars.rl.problem.`19-state RandomWalk`
 import lab.mars.rl.util.asyncs
 import lab.mars.rl.util.await
 import lab.mars.rl.util.listOf
-import lab.mars.rl.util.logLevel
 import lab.mars.rl.util.tuples.tuple2
 import lab.mars.rl.util.ui.ChartApp
 import lab.mars.rl.util.ui.D2DChart
@@ -23,8 +21,7 @@ import org.junit.Test
 class `Test Prediction Off-line λ-return` {
   @Test
   fun `Performance`() {
-    logLevel(Level.ERROR)
-    
+
     val (prob, π) = `19-state RandomWalk`.make()
     val realV = listOf(-20..20 step 2) { it / 20.0 }
     realV[0] = 0.0

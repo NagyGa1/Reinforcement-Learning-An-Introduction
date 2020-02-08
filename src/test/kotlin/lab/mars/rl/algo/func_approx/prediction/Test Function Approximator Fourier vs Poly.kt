@@ -2,7 +2,6 @@
 
 package lab.mars.rl.algo.func_approx.prediction
 
-import ch.qos.logback.classic.Level
 import javafx.application.Application
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.runBlocking
@@ -17,7 +16,6 @@ import lab.mars.rl.problem.`1000-state RandomWalk`
 import lab.mars.rl.util.asyncs
 import lab.mars.rl.util.await
 import lab.mars.rl.util.collection.filter
-import lab.mars.rl.util.logLevel
 import lab.mars.rl.util.ui.ChartApp
 import lab.mars.rl.util.ui.D2DChart
 import lab.mars.rl.util.ui.Line
@@ -29,8 +27,7 @@ import org.junit.Test
 class Test {
   @Test
   fun `Fourier basis vs polynomials`() {
-    logLevel(Level.ERROR)
-    
+
     val (prob, π) = `1000-state RandomWalk`.make()
     val V = prob.`Tabular TD(0)`(π = π, episodes = 100000, α = 0.1)
     

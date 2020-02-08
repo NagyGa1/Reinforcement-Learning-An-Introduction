@@ -2,7 +2,6 @@
 
 package lab.mars.rl.algo.func_approx.on_policy
 
-import ch.qos.logback.classic.Level
 import javafx.application.Application
 import kotlinx.coroutines.runBlocking
 import lab.mars.rl.model.impl.func.LinearFunc
@@ -13,7 +12,6 @@ import lab.mars.rl.problem.MountainCar
 import lab.mars.rl.problem.MountainCar.CarState
 import lab.mars.rl.util.asyncs
 import lab.mars.rl.util.await
-import lab.mars.rl.util.logLevel
 import lab.mars.rl.util.math.max
 import lab.mars.rl.util.tuples.tuple2
 import lab.mars.rl.util.ui.*
@@ -99,7 +97,6 @@ class `Test Optimal Episodic Semi-gradient Sarsa control` {
   
   @Test
   fun `Learning curves`() {
-    logLevel(Level.ERROR)
     val prob = MountainCar.make()
     
     val numTilings = 8
